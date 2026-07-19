@@ -1,0 +1,118 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1c2024;
+  --muted: #5b636b;
+  --accent: #2f5fd8;
+  --panel: #f4f6f9;
+  --border: #dde2e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171a;
+    --fg: #e8eaed;
+    --muted: #9aa3ac;
+    --accent: #7aa2f7;
+    --panel: #1c2024;
+    --border: #2a2f36;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.65;
+  margin: 0;
+  padding: 0 20px 80px;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; }
+
+header {
+  padding: 48px 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+header a.brand {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header a.brand:hover { color: var(--accent); }
+
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 16px 0 8px; }
+h2 { font-size: 1.2rem; margin: 36px 0 10px; }
+h3 { font-size: 1rem; margin: 24px 0 6px; }
+
+.updated { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+a { color: var(--accent); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.94rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th { background: var(--panel); font-weight: 600; }
+
+.table-scroll { overflow-x: auto; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 20px 0;
+}
+
+.card h3 { margin-top: 0; }
+
+ul, ol { padding-left: 22px; }
+li { margin: 6px 0; }
+
+code {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.9em;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+footer a { margin-right: 16px; }
+
+.apps { list-style: none; padding: 0; }
+
+.apps li {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 12px 0;
+}
+
+.apps strong { display: block; font-size: 1.05rem; }
+.apps span { color: var(--muted); font-size: 0.92rem; }
